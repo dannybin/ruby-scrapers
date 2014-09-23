@@ -124,7 +124,7 @@ def scraper(source, articles)
       if date_diff < 7200
         r.db("jurispect").table("news").insert([{"title"=> curr_title, "link"=> curr_link,
          "topics"=> curr_topics, "publication_date"=>curr_pubdate, "author"=>curr_author,
-         "summary"=>curr_summary, "creation_time"=>Time.now, "source"=>source}]).run
+         "summary"=>curr_summary, "creation_time"=>Time.now.strftime("%Y-%m-%d"), "source"=>source, "publish"=>"Not Tagged"}]).run
       end
     end
   rescue
@@ -149,7 +149,7 @@ begin
     if date_diff < 7200
       r.db("jurispect").table("news").insert([{"title"=> curr_title, "link"=> curr_link,
        "topics"=> curr_topics, "publication_date"=>curr_pubdate,
-       "summary"=>curr_summary, "creation_time"=>Time.now, "source"=>"Law Technology News"}]).run
+       "summary"=>curr_summary, "creation_time"=>Time.now.strftime("%Y-%m-%d"), "source"=>"Law Technology News", "publish"=>"Not Tagged"}]).run
     end
   end
 rescue
@@ -167,8 +167,8 @@ begin
   
     if date_diff < 7200
       r.db("jurispect").table("news").insert([{"title"=> curr_title, "link"=> curr_link,
-       "topics"=> curr_topics, "publication_date"=>curr_pubdate, "creation_time"=>Time.now,
-       "source"=> "LA Times"}]).run
+       "topics"=> curr_topics, "publication_date"=>curr_pubdate, "creation_time"=>Time.now.strftime("%Y-%m-%d"),
+       "source"=> "LA Times", "publish"=>"Not Tagged"}]).run
     end
   end
 rescue
@@ -188,7 +188,7 @@ begin
     if date_diff < 7200
       r.db("jurispect").table("news").insert([{"title"=> curr_title, "link"=> curr_link,
        "topics"=> curr_topics, "publication_date"=>curr_pubdate,
-       "summary"=>curr_summary, "creation_time"=>Time.now, "source"=>"New York Times"}]).run
+       "summary"=>curr_summary, "creation_time"=>Time.now.strftime("%Y-%m-%d"), "source"=>"New York Times", "publish"=>"Not Tagged"}]).run
     end
   end
 rescue
@@ -208,7 +208,7 @@ begin
     if date_diff < 7200
       r.db("jurispect").table("news").insert([{"title"=> curr_title, "link"=> curr_link,
        "topics"=> curr_topics, "publication_date"=>curr_pubdate,
-       "summary"=>curr_summary, "creation_time"=>Time.now, "source"=>"New York Times Business"}]).run
+       "summary"=>curr_summary, "creation_time"=>Time.now.strftime("%Y-%m-%d"), "source"=>"New York Times Business", "publish"=>"Not Tagged"}]).run
     end
   end
 rescue
@@ -228,7 +228,7 @@ begin
     if date_diff < 7200
       r.db("jurispect").table("news").insert([{"title"=> curr_title, "link"=> curr_link,
        "topics"=> curr_topics, "publication_date"=>curr_pubdate, "author"=>curr_author,
-       "summary"=>curr_summary, "creation_time"=>Time.now, "source"=>"Litigation Daily"}]).run
+       "summary"=>curr_summary, "creation_time"=>Time.now.strftime("%Y-%m-%d"), "source"=>"Litigation Daily", "publish"=>"Not Tagged"}]).run
     end
   end
 rescue
@@ -248,7 +248,7 @@ begin
     if date_diff < 7200
       r.db("jurispect").table("news").insert([{"title"=> curr_title, "link"=> curr_link,
        "topics"=> curr_topics, "publication_date"=>curr_pubdate,
-       "summary"=>curr_summary, "creation_time"=>Time.now, "source"=>"National Law Journal"}]).run
+       "summary"=>curr_summary, "creation_time"=>Time.now.strftime("%Y-%m-%d"), "source"=>"National Law Journal", "publish"=>"Not Tagged"}]).run
     end
   end
 rescue
@@ -268,7 +268,7 @@ begin
     if date_diff < 7200
       r.db("jurispect").table("news").insert([{"title"=> curr_title, "link"=> curr_link,
        "topics"=> curr_topics, "publication_date"=>curr_pubdate,
-       "summary"=>curr_summary, "creation_time"=>Time.now, "source"=>"Reuters"}]).run
+       "summary"=>curr_summary, "creation_time"=>Time.now.strftime("%Y-%m-%d"), "source"=>"Reuters", "publish"=>"Not Tagged"}]).run
     end
   end
 rescue
@@ -290,7 +290,7 @@ begin
     if date_diff < 7200 
       r.db("jurispect").table("news").insert([{"title"=> curr_title, "link"=> curr_link,
        "topics"=> curr_topics, "publication_date"=>curr_pubdate, "author"=>curr_author,
-       "summary"=>curr_summary, "creation_time"=>Time.now, "source"=>"Business Week"}]).run
+       "summary"=>curr_summary, "creation_time"=>Time.now.strftime("%Y-%m-%d"), "source"=>"Business Week", "publish"=>"Not Tagged"}]).run
     end
   end
 rescue
@@ -310,7 +310,7 @@ begin
     if date_diff < 7200
       r.db("jurispect").table("news").insert([{"title"=> curr_title, "link"=> curr_link,
        "topics"=> curr_topics, "publication_date"=>curr_pubdate,
-       "summary"=>curr_summary, "creation_time"=>Time.now, "source"=>"TIME"}]).run
+       "summary"=>curr_summary, "creation_time"=>Time.now.strftime("%Y-%m-%d"), "source"=>"TIME", "publish"=>"Not Tagged"}]).run
     end
   end
 rescue
@@ -330,7 +330,7 @@ begin
     if date_diff < 7200
       r.db("jurispect").table("news").insert([{"title"=> curr_title, "link"=> curr_link,
        "topics"=> curr_topics, "publication_date"=>curr_pubdate,
-       "summary"=>curr_summary, "creation_time"=>Time.now, "source"=>"Law Technology News"}]).run
+       "summary"=>curr_summary, "creation_time"=>Time.now.strftime("%Y-%m-%d"), "source"=>"Law Technology News", "publish"=>"Not Tagged"}]).run
     end
   end
 rescue
@@ -350,7 +350,7 @@ begin
     if date_diff < 7200
       r.db("jurispect").table("news").insert([{"title"=> curr_title, "link"=> curr_link,
        "topics"=> curr_topics, "publication_date"=>curr_pubdate,
-       "summary"=>curr_summary, "creation_time"=>Time.now, "source"=>"Law Technology News"}]).run
+       "summary"=>curr_summary, "creation_time"=>Time.now.strftime("%Y-%m-%d"), "source"=>"Law Technology News", "publish"=>"Not Tagged"}]).run
     end
   end
 rescue
